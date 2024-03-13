@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
     </link>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <title>Fylo data storage component</title>
@@ -25,14 +26,16 @@
                 <div class="icon-img">
                     <img src="images/icon-folder.svg" alt="" aria-hidden="true" />
                 </div>
-                <div class="icon-img">
-                    <img src="images/icon-upload.svg" alt="" aria-hidden="true" />
-                </div>
+                <div class="icon-img" id="upload" >
+                    <div class="input-div">
+                      <input type="file" id="fileSelector" class="file" multiple="multiple" accept="image/png, image/jpeg, image/jpg"><img src="images/icon-upload.svg" alt="" aria-hidden="true" />
+                    </div>
+                </div>  
             </section>
         </section>
         <!-- Storage Container -->
         <section class="storage-container">
-            <h1>You've used <span>815 MB</span> of your storage</h1>
+            <h1>You've used <span id="storage-used">815 GB</span> of your storage</h1>
             <!-- Progress Bar -->
             <section class="progress-bar">
                 <div class="gradient-bar">
@@ -47,10 +50,17 @@
             </h2>
             <!-- GB left -->
             <section class="gb-left">
-                <p>185 <span>MB left</span></p>
+                <p id="mb-left-num">185 <span id="mb-left-txt">MB left</span></p>
             </section>
         </section>
+        <section class="uploaded-images">
+            <h1>Uploaded Images:</h1>
+            <div class="uploaded-pics">
+               <ul id="localStorage-current"></ul>
+           </div>
+       </section>
     </main>
+
 </body>
 
 </html>

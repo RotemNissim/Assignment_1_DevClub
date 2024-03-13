@@ -133,7 +133,7 @@ h1 span {
   background: var(--gradient);
   border-radius: 50px;
   filter: saturate();
-  width: 74%;
+  width: 0%;
   height: 0.8rem;
   position: relative;
 }
@@ -166,7 +166,7 @@ h2 {
 /** GB left **/
 .gb-left p {
   color: var(--dark-blue);
-  font-size: 2.4rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
@@ -189,8 +189,8 @@ h2 {
   max-width: 9.6rem;
   min-width: 5rem;
   width: 90%;
-  left: 76%;
-  top: -30%;
+  left: 13%;
+  top: -18%;
   transform: translate(-50%, 0);
   background-color: var(--white);
   padding: 0.8rem;
@@ -209,6 +209,93 @@ h2 {
   border-top: 0;
   border-bottom: 35px solid transparent;
   border-right: 45px solid var(--white);
+}
+.icon-img {
+  display: inline-block;
+}
+.icon-img .input-div {
+  position: relative;
+  display: inline-block;
+}
+.icon-img input[type="file"] {
+  display:block;
+  opacity:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+#upload.icon-img {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.file-box {
+position: relative;
+border-radius: 5px;
+padding: 25px;
+margin-bottom: 10px;
+background-color: var(--dark-blue);
+list-style: none;
+overflow: hidden;
+color:var(--pale-blue);
+max-width: 65%;
+max-height: 20%;
+padding-left: 10px;
+width: calc(25%-20px);
+box-sizing: border-box;
+}
+
+.uploaded-images {
+  border-radius: 15px;
+  padding: 0.5% 10%;
+  height: 7rem;
+  width: 100%;
+  position: relative;
+  background-color: var(--container-background-color);
+
+}
+.uploaded-pics {
+ 
+  border-radius: 8px;
+  display:flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-x:auto;
+  padding:0;
+  list-style-type: none;
+}
+.uploaded-pics ul {
+  list-style-type:none;
+  display: flex;
+  gap:10px;
+  flex-direction: row;
+}
+
+.file-box span {
+  margin-right: 4px;
+  max-width: 100px;
+}
+
+.file-box button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 3px 6px; 
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+.file-box button:hover {
+  background-color: var(--grayish-blue);
 }
 
 /** Media Queries **/
